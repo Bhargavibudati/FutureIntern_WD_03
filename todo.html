@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic To-Do WebApp</title>
+    <link rel="stylesheet" href="todoapp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>A Basic To-Do WebApp</h1>
+        
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Activity Name..." required>
+            <select id="labelInput">
+                <option value="Priority">Priority</option>
+                <option value="Secondary">Secondary</option>
+                <option value="Important">Important</option>
+                <option value="DoLater">Do Later</option>
+            </select>
+            <input type="date" id="dateInput" required>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <h2>Pending Tasks</h2>
+        <table id="pendingTasks" class="task-table">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Label</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Completed Tasks</h2>
+        <table id="completedTasks" class="task-table">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th class="labels">Label</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
